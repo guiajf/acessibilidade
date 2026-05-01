@@ -1,10 +1,10 @@
-# 🍺 Análise de Acessibilidade entre Bares – Comida di Buteco JF 2026
+# 🍺 Análise de Acessibilidade com Osmnx e NetworkX
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![OSMnx](https://img.shields.io/badge/OSMnx-2.0+-orange.svg)](https://osmnx.readthedocs.io/)
 
-Este notebook realiza uma **análise completa de acessibilidade viária** entre 40 bares participantes do evento *Comida di Buteco* em Juiz de Fora (MG), utilizando dados reais de rotas urbanas obtidos via **OpenStreetMap** e processados com bibliotecas Python de análise espacial e redes.
+Este notebook realiza uma **análise completa de acessibilidade viária** entre 40 bares participantes do concurso *Comida di Buteco* em Juiz de Fora (MG), utilizando dados reais de rotas urbanas obtidos via **OpenStreetMap** e processados com bibliotecas Python de análise espacial e redes.
 
 ## 📌 Índice
 
@@ -84,3 +84,8 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    ```bash
    git clone https://github.com/seu-usuario/acessibilidade-bares.git
    cd acessibilidade-bares
+   
+2. **Instale as dependências**
+
+   ```python
+   pip install pandas numpy networkx osmnx folium matplotlib seaborn scikit-learn branca
