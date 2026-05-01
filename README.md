@@ -1,4 +1,4 @@
-# 🍺 Análise de acessibilidade com Osmnx e NetworkX
+# 🍺 Análise de acessibilidade com OSMnx e NetworkX
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
