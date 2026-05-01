@@ -109,7 +109,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 
    Ou execute célula por célula no seu ambiente preferido (VS Code, Google Colab, etc.)
 
-## Estrutura do Projeto
+## 📁 Estrutura do projeto
 
    ```python
    acessibilidade-bares/
@@ -129,7 +129,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
     └── mapa_interativo.png
    ```
 
-## Arquivos gerados
+## 📄 Arquivos gerados
 
 | Arquivo | Formato | Descrição |
 |---------|---------|-----------|
@@ -137,29 +137,68 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 | `resumo_acessibilidade.csv` | CSV | Estatísticas agregadas (média, mínimo, máximo) |
 | `mapa_acessibilidade_bares.html` | HTML | Mapa interativo com marcadores coloridos |
 
-## Visualizações
+## 🗺️ Visualizações
 
 1. Heatmap de Tempos de Viagem
    - Matriz que mostra, para cada par de bares, o tempo de deslocamento (minutos):
-   
    - Células amarelas/claras = menor tempo
-   
    - Células vermelhas/escuras = maior tempo
 
 2. Gráficos Comparativos
    - Tempo médio por bar (ordenado)
-   
    - Distribuição dos tempos entre pares
-   
    - Cobertura da rede por bar
-   
    - Relação distância × tempo
 
 3. Mapa Interativo
    - Marcadores coloridos (verde escuro = mais acessível, vermelho = menos acessível)
-   
    - Popup com score, tempo médio e ranking
-   
    - Legenda integrada
+
+## 🛠️ Tecnologias Utilizadas
+
+   | Biblioteca | Finalidade |
+|:-----------|:-----------|
+| `osmnx` | Baixar e modelar grafo viário do OpenStreetMap |
+| `networkx` | Calcular caminhos mais curtos entre nós |
+| `pandas` | Manipulação e análise de dados tabulares |
+| `numpy` | Operações matriciais e estatísticas |
+| `folium` | Criação de mapas interativos |
+| `matplotlib` + `seaborn` | Geração de gráficos e heatmaps |
+| `scikit-learn` | Normalização de métricas (MinMaxScaler) |
+| `branca` | Colormaps para mapas Folium |
+
+## ⚠️ Observações Técnicas
+
+   🔍 Grafo viário: Construído a partir do centro geográfico dos bares com raio de 25 km (rede de direção para automóveis)
+   🚗 Velocidade: Atributos de velocidade padrão do OSMnx (usados para calcular tempo de viagem)
+   🌐 Conectividade: Todos os 40 bares ficaram 100% conectados (sem pares isolados)
+   ⏱️ Performance: O cálculo dos ~780 pares únicos pode levar de 2 a 5 minutos. Para conjuntos maiores, recomenda-se otimização com paralelização ou    heurísticas.
+
+## 🔮 Limitações e Melhorias Futuras
+
+   ### Limitações Atuais
+   - Não considera trânsito em tempo real ou horários de pico
+   - Assume velocidade constante em todas as vias
+   - Não inclui modos alternativos de transporte (pedestre, bicicleta, transporte público)
+
+   ### Sugestões de Melhoria
+   ✅ Adicionar ponderação por horário do dia (pico vs. horário comercial)
+   ✅ Incluir múltiplos modos de transporte (walk, bike, transit)
+   ✅ Implementar cálculo paralelo para acelerar matrizes grandes
+   ✅ Adicionar análise de isócronas para cada bar (áreas alcançáveis em X minutos)
+   ✅ Incorporar dados demográficos para planejamento de público-alvo
+
+   ## 📚 Referências
+   - OSMnx Documentation
+   - NetworkX Shortest Paths
+   - Folium Interactive Maps
+
+   ## 📄 Licença
+   Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e distribuir, desde que os devidos créditos sejam atribuídos.
+   
+   Dados dos bares (nomes e coordenadas) não são fornecidos neste repositório por questões de privacidade comercial. O código é totalmente adaptável para qualquer conjunto de pontos de interesse.
+   
+
       
    
