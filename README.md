@@ -84,11 +84,13 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    ```bash
    git clone https://github.com/seu-usuario/acessibilidade-bares.git
    cd acessibilidade-bares
+   ...
    
 2. **Instale as dependências**
 
    ```python
    pip install pandas numpy networkx osmnx folium matplotlib seaborn scikit-learn branca
+   ...
 
 3. **Prepare o arquivo de dados**
    Certifique-se de ter o arquivo lista_bares.csv com a seguinte estrutura:
