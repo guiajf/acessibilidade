@@ -89,3 +89,14 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 
    ```python
    pip install pandas numpy networkx osmnx folium matplotlib seaborn scikit-learn branca
+
+3. **Prepare o arquivo de dados**
+   Certifique-se de ter o arquivo lista_bares.csv com a seguinte estrutura:
+
+   csv
+   
+   Name,latitude,longitude
+   BAR BATATA D'MOLA,-21.761234,-43.349876
+   BAR DO MARQUIM,-21.759876,-43.351234
+   ...
+   
