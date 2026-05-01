@@ -90,7 +90,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 
    ```python
    pip install pandas numpy networkx osmnx folium matplotlib seaborn scikit-learn branca
-   ...
+   ```
 
 3. **Prepare o arquivo de dados**
    Certifique-se de ter o arquivo lista_bares.csv com a seguinte estrutura:
@@ -99,13 +99,13 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    Name,latitude,longitude
    BAR BATATA D'MOLA,-21.761234,-43.349876
    BAR DO MARQUIM,-21.759876,-43.351234
-   ...
+   ```
 
 4. **Execute o notebook**
    
    ```bash
    jupyter notebook acessibilidade_cb.ipynb
-   ...
+   ```
 
    Ou execute célula por célula no seu ambiente preferido (VS Code, Google Colab, etc.)
 
@@ -127,7 +127,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
     ├── heatmap.png
     ├── rankings.png
     └── mapa_interativo.png
-   ...
+   ```
 
 ## Arquivos gerados
 
