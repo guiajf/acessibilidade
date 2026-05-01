@@ -197,7 +197,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    ## 📄 Licença
    Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e distribuir, desde que os devidos créditos sejam atribuídos.
    
-   Dados dos bares (nomes e coordenadas) não são fornecidos neste repositório por questões de privacidade comercial. O código é totalmente adaptável para qualquer conjunto de pontos de interesse.
+
    
 
       
