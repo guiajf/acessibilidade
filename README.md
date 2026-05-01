@@ -103,6 +103,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    
    ```bash
    jupyter notebook acessibilidade_cb.ipynb
+   ...
 
    Ou execute célula por célula no seu ambiente preferido (VS Code, Google Colab, etc.)
 
@@ -123,6 +124,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
     ├── heatmap.png
     ├── rankings.png
     └── mapa_interativo.png
+   ...
 
 ## Arquivos gerados
 
