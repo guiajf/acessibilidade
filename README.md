@@ -94,7 +94,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    Certifique-se de ter o arquivo lista_bares.csv com a seguinte estrutura:
 
    ```python
-      Name,latitude,longitude
+   Name,latitude,longitude
    BAR BATATA D'MOLA,-21.761234,-43.349876
    BAR DO MARQUIM,-21.759876,-43.351234
    ...
@@ -103,4 +103,32 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    
    ```bash
    jupyter notebook acessibilidade_cb.ipynb
+
+   Ou execute célula por célula no seu ambiente preferido (VS Code, Google Colab, etc.)
+
+## Estrutura do Projeto
+   ```python
+   acessibilidade-bares/
+│
+├── acessibilidade_cb.ipynb      # Notebook principal com toda a análise
+├── lista_bares.csv               # Arquivo de entrada (coordenadas dos bares)
+├── README.md                     # Este arquivo
+│
+├── outputs/                      # Pasta com resultados gerados
+│   ├── acessibilidade_bares.csv  # Métricas detalhadas por bar
+│   ├── resumo_acessibilidade.csv # Estatísticas gerais
+│   └── mapa_acessibilidade_bares.html  # Mapa interativo
+│
+└── images/                       # Screenshots e visualizações (opcional)
+    ├── heatmap.png
+    ├── rankings.png
+    └── mapa_interativo.png
+
+## Arquivos gerados
+
+   Arquivo	Formato	Descrição
+acessibilidade_bares.csv	CSV	Métricas individuais por bar (tempos, distâncias, scores)
+resumo_acessibilidade.csv	CSV	Estatísticas agregadas (média, mínimo, máximo)
+mapa_acessibilidade_bares.html	HTML	Mapa interativo com marcadores coloridos
+   
    
