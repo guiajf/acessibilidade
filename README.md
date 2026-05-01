@@ -6,20 +6,6 @@
 
 Este notebook realiza uma **análise completa de acessibilidade viária** entre 40 bares participantes do concurso *Comida di Buteco* em Juiz de Fora (MG), utilizando dados reais de rotas urbanas obtidos via **OpenStreetMap** e processados com bibliotecas Python de análise espacial e redes.
 
-## 📌 Índice
-
-- [Visão Geral](##visão-geral)
-- [Funcionalidades](#funcionalidades)
-- [Resultados Principais](#resultados-principais)
-- [Como Executar](#como-executar)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Arquivos Gerados](#arquivos-gerados)
-- [Visualizações](#visualizações)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Observações Técnicas](#observações-técnicas)
-- [Limitações e Melhorias Futuras](#limitações-e-melhorias-futuras)
-- [Licença](#licença)
-
 ## 🎯 Visão Geral
 
 O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do evento, gerando métricas como:
