@@ -175,10 +175,11 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    ✅ Adicionar análise de isócronas para cada bar (áreas alcançáveis em X minutos)<br>
    ✅ Incorporar dados demográficos para planejamento de público-alvo
 
-   ## 📚 Referências
-   - OSMnx Documentation
-   - NetworkX Shortest Paths
-   - Folium Interactive Maps
+## 📚 Referências
+
+   - [OSMnx Documentation](https://osmnx.readthedocs.io/)
+   - [NetworkX Shortest Paths](https://networkx.org/documentation/stable/reference/algorithms/shortest_paths.html)
+   - [Folium Interactive Maps](https://python-visualization.github.io/folium/)
 
    ## 📄 Licença
    Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e distribuir, desde que os devidos créditos sejam atribuídos.
