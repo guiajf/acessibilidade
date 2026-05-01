@@ -84,7 +84,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    ```bash
    git clone https://github.com/seu-usuario/acessibilidade-bares.git
    cd acessibilidade-bares
-   ...
+   ```
    
 2. **Instale as dependências**
 
