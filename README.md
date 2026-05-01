@@ -1,9 +1,10 @@
-# 🍺 Análise de Acessibilidade entre Bares com Osmnx e NetworkX
+# 🍺 Análise de Acessibilidade entre Bares – Comida di Buteco JF 2026
+
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![OSMnx](https://img.shields.io/badge/OSMnx-2.0+-orange.svg)](https://osmnx.readthedocs.io/)
 
-Este notebook realiza uma **análise completa de acessibilidade viária** entre 40 bares participantes do concurso *Comida di Buteco* em Juiz de Fora (MG), utilizando dados reais de rotas urbanas obtidos via **OpenStreetMap** e processados com bibliotecas Python de análise espacial e redes.
+Este notebook realiza uma **análise completa de acessibilidade viária** entre 40 bares participantes do evento *Comida di Buteco* em Juiz de Fora (MG), utilizando dados reais de rotas urbanas obtidos via **OpenStreetMap** e processados com bibliotecas Python de análise espacial e redes.
 
 ## 📌 Índice
 
