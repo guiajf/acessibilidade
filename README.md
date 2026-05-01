@@ -156,9 +156,9 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 
 ## ⚠️ Observações técnicas
 
-   🔍 Grafo viário: Construído a partir do centro geográfico dos bares com raio de 25 km (rede de direção para automóveis)
-   🚗 Velocidade: Atributos de velocidade padrão do OSMnx (usados para calcular tempo de viagem)
-   🌐 Conectividade: Todos os 40 bares ficaram 100% conectados (sem pares isolados)
+   🔍 Grafo viário: Construído a partir do centro geográfico dos bares com raio de 25 km (rede de direção para automóveis)<br>
+   🚗 Velocidade: Atributos de velocidade padrão do OSMnx (usados para calcular tempo de viagem)<br>
+   🌐 Conectividade: Todos os 40 bares ficaram 100% conectados (sem pares isolados)<br>
    ⏱️ Performance: O cálculo dos ~780 pares únicos pode levar de 2 a 5 minutos. Para conjuntos maiores, recomenda-se otimização com paralelização ou    heurísticas.
 
 ## 🔮 Limitações e melhorias futuras
@@ -169,10 +169,10 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    - Não inclui modos alternativos de transporte (pedestre, bicicleta, transporte público)
 
    ### Sugestões de melhoria
-   ✅ Adicionar ponderação por horário do dia (pico vs. horário comercial)
-   ✅ Incluir múltiplos modos de transporte (walk, bike, transit)
-   ✅ Implementar cálculo paralelo para acelerar matrizes grandes
-   ✅ Adicionar análise de isócronas para cada bar (áreas alcançáveis em X minutos)
+   ✅ Adicionar ponderação por horário do dia (pico vs. horário comercial)<br>
+   ✅ Incluir múltiplos modos de transporte (walk, bike, transit)<br>
+   ✅ Implementar cálculo paralelo para acelerar matrizes grandes<br>
+   ✅ Adicionar análise de isócronas para cada bar (áreas alcançáveis em X minutos)<br>
    ✅ Incorporar dados demográficos para planejamento de público-alvo
 
    ## 📚 Referências
