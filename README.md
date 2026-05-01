@@ -1,4 +1,4 @@
-# 🍺 Análise de Acessibilidade com Osmnx e NetworkX
+# 🍺 Análise de acessibilidade com Osmnx e NetworkX
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -6,7 +6,7 @@
 
 Este notebook realiza uma **análise completa de acessibilidade viária** entre 40 bares participantes do concurso *Comida di Buteco* em Juiz de Fora (MG), utilizando dados reais de rotas urbanas obtidos via **OpenStreetMap** e processados com bibliotecas Python de análise espacial e redes.
 
-## 🎯 Visão Geral
+## 🎯 Visão geral
 
 O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do evento, gerando métricas como:
 
@@ -28,7 +28,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 
 ## 📊 Resultados Principais
 
-### 🏆 Top 5 Bares Mais Acessíveis
+### 🏆 Top 5 bares mais acessíveis
 
 | Ranking | Bar | Tempo Médio | Score Final |
 |---------|-----|-------------|--------------|
@@ -38,7 +38,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 | 4º | BAR DO ABILIO | 5.0 min | 77.4/100 |
 | 5º | REZA FORTE | 5.0 min | 77.4/100 |
 
-### 📉 Bottom 3 Bares Menos Acessíveis
+### 📉 Bottom 3 bares menos acessíveis
 
 | Ranking | Bar | Tempo Médio |
 |---------|-----|-------------|
@@ -46,7 +46,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 | 39º | NOSSO BAR JF | 15.3 min |
 | 40º | BAR DO BREJO | 15.5 min |
 
-### 📈 Estatísticas Globais
+### 📈 Estatísticas globais
 
 | Métrica | Valor |
 |---------|-------|
@@ -56,7 +56,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 | **Pares de rotas calculados** | 1.560 |
 | **Bares analisados** | 40 |
 
-## 🚀 Como Executar
+## 🚀 Como executar
 
 ### Pré-requisitos
 
@@ -141,7 +141,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    - Popup com score, tempo médio e ranking
    - Legenda integrada
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias utilizadas
 
    | Biblioteca | Finalidade |
 |:-----------|:-----------|
@@ -154,21 +154,21 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 | `scikit-learn` | Normalização de métricas (MinMaxScaler) |
 | `branca` | Colormaps para mapas Folium |
 
-## ⚠️ Observações Técnicas
+## ⚠️ Observações técnicas
 
    🔍 Grafo viário: Construído a partir do centro geográfico dos bares com raio de 25 km (rede de direção para automóveis)
    🚗 Velocidade: Atributos de velocidade padrão do OSMnx (usados para calcular tempo de viagem)
    🌐 Conectividade: Todos os 40 bares ficaram 100% conectados (sem pares isolados)
    ⏱️ Performance: O cálculo dos ~780 pares únicos pode levar de 2 a 5 minutos. Para conjuntos maiores, recomenda-se otimização com paralelização ou    heurísticas.
 
-## 🔮 Limitações e Melhorias Futuras
+## 🔮 Limitações e melhorias futuras
 
-   ### Limitações Atuais
+   ### Limitações atuais
    - Não considera trânsito em tempo real ou horários de pico
    - Assume velocidade constante em todas as vias
    - Não inclui modos alternativos de transporte (pedestre, bicicleta, transporte público)
 
-   ### Sugestões de Melhoria
+   ### Sugestões de melhoria
    ✅ Adicionar ponderação por horário do dia (pico vs. horário comercial)
    ✅ Incluir múltiplos modos de transporte (walk, bike, transit)
    ✅ Implementar cálculo paralelo para acelerar matrizes grandes
