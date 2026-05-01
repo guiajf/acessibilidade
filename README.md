@@ -125,18 +125,18 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 
 ## 🗺️ Visualizações
 
-1. Heatmap de Tempos de Viagem
+1. **Heatmap de Tempos de Viagem**
    - Matriz que mostra, para cada par de bares, o tempo de deslocamento (minutos):
    - Células amarelas/claras = menor tempo
    - Células vermelhas/escuras = maior tempo
 
-2. Gráficos Comparativos
+2. **Gráficos Comparativos**
    - Tempo médio por bar (ordenado)
    - Distribuição dos tempos entre pares
    - Cobertura da rede por bar
    - Relação distância × tempo
 
-3. Mapa Interativo
+3. **Mapa Interativo**
    - Marcadores coloridos (verde escuro = mais acessível, vermelho = menos acessível)
    - Popup com score, tempo médio e ranking
    - Legenda integrada
