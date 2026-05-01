@@ -110,6 +110,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
    Ou execute célula por célula no seu ambiente preferido (VS Code, Google Colab, etc.)
 
 ## Estrutura do Projeto
+
    ```python
    acessibilidade-bares/
 │
