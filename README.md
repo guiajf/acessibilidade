@@ -8,7 +8,7 @@ Este notebook realiza uma **análise completa de acessibilidade viária** entre 
 
 ## 📌 Índice
 
-- [Visão Geral](#visão-geral)
+- [Visão Geral](##visão-geral)
 - [Funcionalidades](#funcionalidades)
 - [Resultados Principais](#resultados-principais)
 - [Como Executar](#como-executar)
