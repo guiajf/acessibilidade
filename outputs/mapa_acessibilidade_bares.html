@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ac5d310409ff3f6679ea0df3a2d72d16 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+    <div style="position: fixed; top: 50px; left: 50px; width: 300px; height: 50px;
+                background-color: white; border:2px solid black; border-radius: 5px;
+                z-index: 9999; font-family: Arial; text-align: center; padding: 5px;">
+        <b>Mapa de acessibilidade - Comida di Buteco JF 2026</b><br>
+        <span style="font-size: 11px;">Verde escuro = mais acessível | Vermelho = menos acessível</span>
+    </div>
+    
+            <div class="folium-map" id="map_ac5d310409ff3f6679ea0df3a2d72d16" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ac5d310409ff3f6679ea0df3a2d72d16 = L.map(
+                "map_ac5d310409ff3f6679ea0df3a2d72d16",
+                {
+                    center: [-21.7589521225, -43.359571835],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3237c9aeaacc5b0cdf76e8cd7084f226 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3237c9aeaacc5b0cdf76e8cd7084f226.addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+            var circle_marker_8bd106bac8dbf029c51f557bbbaec28a = L.circleMarker(
+                [-21.7819995, -43.2989666],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffc200ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_ddf189167707330be80f00821d77c0b1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c0fcc70ef1f80e3db7c07512f1c31718 = $(`<div id="html_c0fcc70ef1f80e3db7c07512f1c31718" style="width: 100.0%; height: 100.0%;">     <b>ADEGA BAR</b><br>     <b>Acessibilidade:</b> 26.5/100<br>     <b>Tempo médio:</b> 11.8 min<br>     <b>Ranking:</b> #37     </div>`)[0];
+                popup_ddf189167707330be80f00821d77c0b1.setContent(html_c0fcc70ef1f80e3db7c07512f1c31718);
+            
+        
+
+        circle_marker_8bd106bac8dbf029c51f557bbbaec28a.bindPopup(popup_ddf189167707330be80f00821d77c0b1)
+        ;
+
+        
+    
+    
+            var circle_marker_7832da4267149023627b20042ea9c7b8 = L.circleMarker(
+                [-21.7365987, -43.3609957],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_724058a2b074c6fc26ba8fdecd1e4164 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5e9db99683267e25eaf49e90217d7603 = $(`<div id="html_5e9db99683267e25eaf49e90217d7603" style="width: 100.0%; height: 100.0%;">     <b>BAR DIAS</b><br>     <b>Acessibilidade:</b> 65.7/100<br>     <b>Tempo médio:</b> 6.5 min<br>     <b>Ranking:</b> #23     </div>`)[0];
+                popup_724058a2b074c6fc26ba8fdecd1e4164.setContent(html_5e9db99683267e25eaf49e90217d7603);
+            
+        
+
+        circle_marker_7832da4267149023627b20042ea9c7b8.bindPopup(popup_724058a2b074c6fc26ba8fdecd1e4164)
+        ;
+
+        
+    
+    
+            var circle_marker_b8110184a8e8271b94d2e889ace75941 = L.circleMarker(
+                [-21.7586111, -43.3472222],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006700ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_e46a604d31f6268e1070aa43ab3001af = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_aeac66549eb22c2c5176ca3c0b62b247 = $(`<div id="html_aeac66549eb22c2c5176ca3c0b62b247" style="width: 100.0%; height: 100.0%;">     <b>BAR DO ABILIO</b><br>     <b>Acessibilidade:</b> 77.4/100<br>     <b>Tempo médio:</b> 5.0 min<br>     <b>Ranking:</b> #4     </div>`)[0];
+                popup_e46a604d31f6268e1070aa43ab3001af.setContent(html_aeac66549eb22c2c5176ca3c0b62b247);
+            
+        
+
+        circle_marker_b8110184a8e8271b94d2e889ace75941.bindPopup(popup_e46a604d31f6268e1070aa43ab3001af)
+        ;
+
+        
+    
+    
+            var circle_marker_8828466319a12605a4c6d703fd420e50 = L.circleMarker(
+                [-21.766567, -43.3723106],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007f00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_c21a0619f2321b78fdb6f8af234b68b2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_330d1aea89c63da5353279421517e6b6 = $(`<div id="html_330d1aea89c63da5353279421517e6b6" style="width: 100.0%; height: 100.0%;">     <b>BAR DO ANTONIO</b><br>     <b>Acessibilidade:</b> 60.9/100<br>     <b>Tempo médio:</b> 7.5 min<br>     <b>Ranking:</b> #30     </div>`)[0];
+                popup_c21a0619f2321b78fdb6f8af234b68b2.setContent(html_330d1aea89c63da5353279421517e6b6);
+            
+        
+
+        circle_marker_8828466319a12605a4c6d703fd420e50.bindPopup(popup_c21a0619f2321b78fdb6f8af234b68b2)
+        ;
+
+        
+    
+    
+            var circle_marker_ad5ecdc8f7b4085dcfd5f8547d9fb28a = L.circleMarker(
+                [-21.7756168, -43.378489],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#108800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_cd1363580902f6851246e79d5d8e2fd2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_19cc8ab8f90d82a19be0e3fa5a8e61c4 = $(`<div id="html_19cc8ab8f90d82a19be0e3fa5a8e61c4" style="width: 100.0%; height: 100.0%;">     <b>BAR DO BENE</b><br>     <b>Acessibilidade:</b> 58.7/100<br>     <b>Tempo médio:</b> 7.7 min<br>     <b>Ranking:</b> #31     </div>`)[0];
+                popup_cd1363580902f6851246e79d5d8e2fd2.setContent(html_19cc8ab8f90d82a19be0e3fa5a8e61c4);
+            
+        
+
+        circle_marker_ad5ecdc8f7b4085dcfd5f8547d9fb28a.bindPopup(popup_cd1363580902f6851246e79d5d8e2fd2)
+        ;
+
+        
+    
+    
+            var circle_marker_5e1b0b4245a5c1d1cdfe6e2a39b78559 = L.circleMarker(
+                [-21.6853665, -43.4362092],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_2f5d7c77c54888c1c142b71197967da5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6143b2f16e179927c1e4a6e08001edef = $(`<div id="html_6143b2f16e179927c1e4a6e08001edef" style="width: 100.0%; height: 100.0%;">     <b>BAR DO BREJO</b><br>     <b>Acessibilidade:</b> 0.0/100<br>     <b>Tempo médio:</b> 15.5 min<br>     <b>Ranking:</b> #40     </div>`)[0];
+                popup_2f5d7c77c54888c1c142b71197967da5.setContent(html_6143b2f16e179927c1e4a6e08001edef);
+            
+        
+
+        circle_marker_5e1b0b4245a5c1d1cdfe6e2a39b78559.bindPopup(popup_2f5d7c77c54888c1c142b71197967da5)
+        ;
+
+        
+    
+    
+            var circle_marker_0073c4196fc2287eef62b06d09df7750 = L.circleMarker(
+                [-21.7672931, -43.3688659],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007a00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_59d11d92d6afd495bd2be4ccfe4d1110 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f9f439163ab1a6891aae0b129cbc00c4 = $(`<div id="html_f9f439163ab1a6891aae0b129cbc00c4" style="width: 100.0%; height: 100.0%;">     <b>BAR DO JORGE</b><br>     <b>Acessibilidade:</b> 64.3/100<br>     <b>Tempo médio:</b> 6.9 min<br>     <b>Ranking:</b> #25     </div>`)[0];
+                popup_59d11d92d6afd495bd2be4ccfe4d1110.setContent(html_f9f439163ab1a6891aae0b129cbc00c4);
+            
+        
+
+        circle_marker_0073c4196fc2287eef62b06d09df7750.bindPopup(popup_59d11d92d6afd495bd2be4ccfe4d1110)
+        ;
+
+        
+    
+    
+            var circle_marker_96f2e40ef9eb758f12c468fe0876ed87 = L.circleMarker(
+                [-21.7534911, -43.3533205],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006400ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_490378cb65903d315336ba92b06659c7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7093172e0b21de931d99a8c2a622a1fc = $(`<div id="html_7093172e0b21de931d99a8c2a622a1fc" style="width: 100.0%; height: 100.0%;">     <b>BAR DO MARQUIM</b><br>     <b>Acessibilidade:</b> 79.6/100<br>     <b>Tempo médio:</b> 4.6 min<br>     <b>Ranking:</b> #2     </div>`)[0];
+                popup_490378cb65903d315336ba92b06659c7.setContent(html_7093172e0b21de931d99a8c2a622a1fc);
+            
+        
+
+        circle_marker_96f2e40ef9eb758f12c468fe0876ed87.bindPopup(popup_490378cb65903d315336ba92b06659c7)
+        ;
+
+        
+    
+    
+            var circle_marker_5d3371ac28675dcf7ebcd0d7fed51ac8 = L.circleMarker(
+                [-21.7498068, -43.3680499],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_e85d865ced97a82ecd744f9be2913124 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bf0155a76287fa3b4b369e7193667bd8 = $(`<div id="html_bf0155a76287fa3b4b369e7193667bd8" style="width: 100.0%; height: 100.0%;">     <b>BAR DO PASSARINHO</b><br>     <b>Acessibilidade:</b> 65.5/100<br>     <b>Tempo médio:</b> 6.8 min<br>     <b>Ranking:</b> #24     </div>`)[0];
+                popup_e85d865ced97a82ecd744f9be2913124.setContent(html_bf0155a76287fa3b4b369e7193667bd8);
+            
+        
+
+        circle_marker_5d3371ac28675dcf7ebcd0d7fed51ac8.bindPopup(popup_e85d865ced97a82ecd744f9be2913124)
+        ;
+
+        
+    
+    
+            var circle_marker_a2808b372435116e69d7bf171d52aae1 = L.circleMarker(
+                [-21.7882238, -43.3831797],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ca600ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_0b3d10501e7a2f73c786efdc14d085ab = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fb6b238e4674908ef20708a3a63b99af = $(`<div id="html_fb6b238e4674908ef20708a3a63b99af" style="width: 100.0%; height: 100.0%;">     <b>BAR DO TIAO</b><br>     <b>Acessibilidade:</b> 54.0/100<br>     <b>Tempo médio:</b> 8.4 min<br>     <b>Ranking:</b> #34     </div>`)[0];
+                popup_0b3d10501e7a2f73c786efdc14d085ab.setContent(html_fb6b238e4674908ef20708a3a63b99af);
+            
+        
+
+        circle_marker_a2808b372435116e69d7bf171d52aae1.bindPopup(popup_0b3d10501e7a2f73c786efdc14d085ab)
+        ;
+
+        
+    
+    
+            var circle_marker_b5ebb7911ec35863ccc96c95df7a35d2 = L.circleMarker(
+                [-21.78997, -43.3533213],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007c00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_9ab84e405e7aecb8f5b8698c3d4e3b36 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6d2244a40b632f80adbc4da6196d98fc = $(`<div id="html_6d2244a40b632f80adbc4da6196d98fc" style="width: 100.0%; height: 100.0%;">     <b>BAR TORRESMO</b><br>     <b>Acessibilidade:</b> 63.1/100<br>     <b>Tempo médio:</b> 6.8 min<br>     <b>Ranking:</b> #29     </div>`)[0];
+                popup_9ab84e405e7aecb8f5b8698c3d4e3b36.setContent(html_6d2244a40b632f80adbc4da6196d98fc);
+            
+        
+
+        circle_marker_b5ebb7911ec35863ccc96c95df7a35d2.bindPopup(popup_9ab84e405e7aecb8f5b8698c3d4e3b36)
+        ;
+
+        
+    
+    
+            var circle_marker_e988058bf66d1d2e56d77e30f7f3efd7 = L.circleMarker(
+                [-21.7418419, -43.3494793],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007000ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_f5045b8eeee4921ea7dfbf9bb6dde9ca = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6a35ed98528da332361b3832853ceeab = $(`<div id="html_6a35ed98528da332361b3832853ceeab" style="width: 100.0%; height: 100.0%;">     <b>BAR DU BUNECO</b><br>     <b>Acessibilidade:</b> 71.5/100<br>     <b>Tempo médio:</b> 5.7 min<br>     <b>Ranking:</b> #17     </div>`)[0];
+                popup_f5045b8eeee4921ea7dfbf9bb6dde9ca.setContent(html_6a35ed98528da332361b3832853ceeab);
+            
+        
+
+        circle_marker_e988058bf66d1d2e56d77e30f7f3efd7.bindPopup(popup_f5045b8eeee4921ea7dfbf9bb6dde9ca)
+        ;
+
+        
+    
+    
+            var circle_marker_4216a58a40ac8fd9afd1ef8533ca94ad = L.circleMarker(
+                [-21.7652098, -43.3536869],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_5f18bff2fc86b17abd5e892d7b55e58d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_61312d49fa24c7c15380a6ad20b978c0 = $(`<div id="html_61312d49fa24c7c15380a6ad20b978c0" style="width: 100.0%; height: 100.0%;">     <b>BAR DU CHICO</b><br>     <b>Acessibilidade:</b> 77.0/100<br>     <b>Tempo médio:</b> 5.1 min<br>     <b>Ranking:</b> #7     </div>`)[0];
+                popup_5f18bff2fc86b17abd5e892d7b55e58d.setContent(html_61312d49fa24c7c15380a6ad20b978c0);
+            
+        
+
+        circle_marker_4216a58a40ac8fd9afd1ef8533ca94ad.bindPopup(popup_5f18bff2fc86b17abd5e892d7b55e58d)
+        ;
+
+        
+    
+    
+            var circle_marker_c2d38bf97b0b5a455c0f201f9bac2070 = L.circleMarker(
+                [-21.7867333, -43.34463],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007500ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_7a9b4f7cca0f664571aa66123da18a2e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4e37c4f1d350d7dffff2a0a0985ebed2 = $(`<div id="html_4e37c4f1d350d7dffff2a0a0985ebed2" style="width: 100.0%; height: 100.0%;">     <b>BAR SANTA MODERACAO</b><br>     <b>Acessibilidade:</b> 67.5/100<br>     <b>Tempo médio:</b> 6.3 min<br>     <b>Ranking:</b> #21     </div>`)[0];
+                popup_7a9b4f7cca0f664571aa66123da18a2e.setContent(html_4e37c4f1d350d7dffff2a0a0985ebed2);
+            
+        
+
+        circle_marker_c2d38bf97b0b5a455c0f201f9bac2070.bindPopup(popup_7a9b4f7cca0f664571aa66123da18a2e)
+        ;
+
+        
+    
+    
+            var circle_marker_a8430f6aaa381754c0b780cbf69f52c3 = L.circleMarker(
+                [-21.7541569, -43.3521957],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006400ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_82b91fd27ef753685fb9d5751718deb4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cb86ec0cbf3e350d6bb336cc8ff58db2 = $(`<div id="html_cb86ec0cbf3e350d6bb336cc8ff58db2" style="width: 100.0%; height: 100.0%;">     <b>BAR BATATA D'MOLA</b><br>     <b>Acessibilidade:</b> 80.0/100<br>     <b>Tempo médio:</b> 4.6 min<br>     <b>Ranking:</b> #1     </div>`)[0];
+                popup_82b91fd27ef753685fb9d5751718deb4.setContent(html_cb86ec0cbf3e350d6bb336cc8ff58db2);
+            
+        
+
+        circle_marker_a8430f6aaa381754c0b780cbf69f52c3.bindPopup(popup_82b91fd27ef753685fb9d5751718deb4)
+        ;
+
+        
+    
+    
+            var circle_marker_00d0fa2c0c1a27de0cd699fc58833360 = L.circleMarker(
+                [-21.7536439, -43.3586749],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006900ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_2bd35e8371d675d537d287e702b4b8cc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f52dfed2d293ff64c98eec07850104c8 = $(`<div id="html_f52dfed2d293ff64c98eec07850104c8" style="width: 100.0%; height: 100.0%;">     <b>BIROSCA BAR E RESTAURANTE</b><br>     <b>Acessibilidade:</b> 76.7/100<br>     <b>Tempo médio:</b> 5.1 min<br>     <b>Ranking:</b> #8     </div>`)[0];
+                popup_2bd35e8371d675d537d287e702b4b8cc.setContent(html_f52dfed2d293ff64c98eec07850104c8);
+            
+        
+
+        circle_marker_00d0fa2c0c1a27de0cd699fc58833360.bindPopup(popup_2bd35e8371d675d537d287e702b4b8cc)
+        ;
+
+        
+    
+    
+            var circle_marker_03eec1a56e3bafc846bc9095fa6b964e = L.circleMarker(
+                [-21.7319617, -43.3568702],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007400ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_7b5614fd8fa0ecab98bf28450f12dcbf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3f0f9a535b84ebd4df849278149b654e = $(`<div id="html_3f0f9a535b84ebd4df849278149b654e" style="width: 100.0%; height: 100.0%;">     <b>BUDEGA DO PAPAI</b><br>     <b>Acessibilidade:</b> 68.6/100<br>     <b>Tempo médio:</b> 6.0 min<br>     <b>Ranking:</b> #19     </div>`)[0];
+                popup_7b5614fd8fa0ecab98bf28450f12dcbf.setContent(html_3f0f9a535b84ebd4df849278149b654e);
+            
+        
+
+        circle_marker_03eec1a56e3bafc846bc9095fa6b964e.bindPopup(popup_7b5614fd8fa0ecab98bf28450f12dcbf)
+        ;
+
+        
+    
+    
+            var circle_marker_fad09cc8b3d7837ff4b35c4d8b0d289a = L.circleMarker(
+                [-21.7717784, -43.3752646],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007b00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_b6346fd7d050b2d4550e6fcb4021a51d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_632b9a87623f6c7aa47d586306adf6be = $(`<div id="html_632b9a87623f6c7aa47d586306adf6be" style="width: 100.0%; height: 100.0%;">     <b>BUTECO DO PRINCIPE</b><br>     <b>Acessibilidade:</b> 63.8/100<br>     <b>Tempo médio:</b> 6.9 min<br>     <b>Ranking:</b> #28     </div>`)[0];
+                popup_b6346fd7d050b2d4550e6fcb4021a51d.setContent(html_632b9a87623f6c7aa47d586306adf6be);
+            
+        
+
+        circle_marker_fad09cc8b3d7837ff4b35c4d8b0d289a.bindPopup(popup_b6346fd7d050b2d4550e6fcb4021a51d)
+        ;
+
+        
+    
+    
+            var circle_marker_a26919c77ed509978af19b0e3353699d = L.circleMarker(
+                [-21.7745557, -43.3501901],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006b00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_cdd9ff3ebca83037d98456e19d445380 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1ff8c7104812fcba221cd1ad827964ef = $(`<div id="html_1ff8c7104812fcba221cd1ad827964ef" style="width: 100.0%; height: 100.0%;">     <b>BUTIQUIM DA FABRICA</b><br>     <b>Acessibilidade:</b> 74.9/100<br>     <b>Tempo médio:</b> 5.3 min<br>     <b>Ranking:</b> #11     </div>`)[0];
+                popup_cdd9ff3ebca83037d98456e19d445380.setContent(html_1ff8c7104812fcba221cd1ad827964ef);
+            
+        
+
+        circle_marker_a26919c77ed509978af19b0e3353699d.bindPopup(popup_cdd9ff3ebca83037d98456e19d445380)
+        ;
+
+        
+    
+    
+            var circle_marker_be3d972115a08ae8bd9e633dbc2a2a0d = L.circleMarker(
+                [-21.7632591, -43.3454451],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006600ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_418524db0994f3eadbd895ef50c4473d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a79ae02e15b8993c59f4c4b64c88aca3 = $(`<div id="html_a79ae02e15b8993c59f4c4b64c88aca3" style="width: 100.0%; height: 100.0%;">     <b>CAMINHO DA ROCA</b><br>     <b>Acessibilidade:</b> 78.3/100<br>     <b>Tempo médio:</b> 4.8 min<br>     <b>Ranking:</b> #3     </div>`)[0];
+                popup_418524db0994f3eadbd895ef50c4473d.setContent(html_a79ae02e15b8993c59f4c4b64c88aca3);
+            
+        
+
+        circle_marker_be3d972115a08ae8bd9e633dbc2a2a0d.bindPopup(popup_418524db0994f3eadbd895ef50c4473d)
+        ;
+
+        
+    
+    
+            var circle_marker_2ef774cc8058febba59f99fd67122b81 = L.circleMarker(
+                [-21.764565, -43.3521346],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_09c3e1cc76a2abe2b6ee7fb66806538d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9434d7c8a44b4c06f226dace44ab9fab = $(`<div id="html_9434d7c8a44b4c06f226dace44ab9fab" style="width: 100.0%; height: 100.0%;">     <b>CARLOTA</b><br>     <b>Acessibilidade:</b> 77.1/100<br>     <b>Tempo médio:</b> 5.1 min<br>     <b>Ranking:</b> #6     </div>`)[0];
+                popup_09c3e1cc76a2abe2b6ee7fb66806538d.setContent(html_9434d7c8a44b4c06f226dace44ab9fab);
+            
+        
+
+        circle_marker_2ef774cc8058febba59f99fd67122b81.bindPopup(popup_09c3e1cc76a2abe2b6ee7fb66806538d)
+        ;
+
+        
+    
+    
+            var circle_marker_7277f5e862a6614363e00dd78ef8916f = L.circleMarker(
+                [-21.7554517, -43.3399353],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007000ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_3d07e11c61a7fc8b554a5d335445ed84 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fcc9f72a42dae04ce099c3d7b871e92f = $(`<div id="html_fcc9f72a42dae04ce099c3d7b871e92f" style="width: 100.0%; height: 100.0%;">     <b>CASARAO BAR</b><br>     <b>Acessibilidade:</b> 71.1/100<br>     <b>Tempo médio:</b> 6.0 min<br>     <b>Ranking:</b> #18     </div>`)[0];
+                popup_3d07e11c61a7fc8b554a5d335445ed84.setContent(html_fcc9f72a42dae04ce099c3d7b871e92f);
+            
+        
+
+        circle_marker_7277f5e862a6614363e00dd78ef8916f.bindPopup(popup_3d07e11c61a7fc8b554a5d335445ed84)
+        ;
+
+        
+    
+    
+            var circle_marker_a81d4fe6aadbccf775110a756139ff82 = L.circleMarker(
+                [-21.6885565, -43.4341042],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff1200ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_039c0ac9245927907e67f144709c007a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_10223edd6038bfbfefb0111936e2483f = $(`<div id="html_10223edd6038bfbfefb0111936e2483f" style="width: 100.0%; height: 100.0%;">     <b>COLISEUM BAR</b><br>     <b>Acessibilidade:</b> 2.2/100<br>     <b>Tempo médio:</b> 15.2 min<br>     <b>Ranking:</b> #39     </div>`)[0];
+                popup_039c0ac9245927907e67f144709c007a.setContent(html_10223edd6038bfbfefb0111936e2483f);
+            
+        
+
+        circle_marker_a81d4fe6aadbccf775110a756139ff82.bindPopup(popup_039c0ac9245927907e67f144709c007a)
+        ;
+
+        
+    
+    
+            var circle_marker_db8109b3d0d3c5cb1093129620a97656 = L.circleMarker(
+                [-21.7216065, -43.3546633],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#158b00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_e9bf71b257b333cc86093a13ac24a03f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0d35c36f133135c7eea34aeea2fa74ce = $(`<div id="html_0d35c36f133135c7eea34aeea2fa74ce" style="width: 100.0%; height: 100.0%;">     <b>COMPADRE GRILL COSTELARIA</b><br>     <b>Acessibilidade:</b> 58.3/100<br>     <b>Tempo médio:</b> 7.5 min<br>     <b>Ranking:</b> #32     </div>`)[0];
+                popup_e9bf71b257b333cc86093a13ac24a03f.setContent(html_0d35c36f133135c7eea34aeea2fa74ce);
+            
+        
+
+        circle_marker_db8109b3d0d3c5cb1093129620a97656.bindPopup(popup_e9bf71b257b333cc86093a13ac24a03f)
+        ;
+
+        
+    
+    
+            var circle_marker_adb9f1e4b0db52c3414c1f33e19486f4 = L.circleMarker(
+                [-21.7777764, -43.3483018],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006d00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_189c82ca4b05440d612acf067692518d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3938aff503de85b43ad19d2e33111fa8 = $(`<div id="html_3938aff503de85b43ad19d2e33111fa8" style="width: 100.0%; height: 100.0%;">     <b>DIRCEUS PUB</b><br>     <b>Acessibilidade:</b> 73.4/100<br>     <b>Tempo médio:</b> 5.5 min<br>     <b>Ranking:</b> #14     </div>`)[0];
+                popup_189c82ca4b05440d612acf067692518d.setContent(html_3938aff503de85b43ad19d2e33111fa8);
+            
+        
+
+        circle_marker_adb9f1e4b0db52c3414c1f33e19486f4.bindPopup(popup_189c82ca4b05440d612acf067692518d)
+        ;
+
+        
+    
+    
+            var circle_marker_ad1f347c598943da4173957ef55fa713 = L.circleMarker(
+                [-21.789056, -43.3810512],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#57ac00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_0e05b2d43d1d128a6b64b0289c310d10 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fdd268c9083a28c7bfb201ad51b467db = $(`<div id="html_fdd268c9083a28c7bfb201ad51b467db" style="width: 100.0%; height: 100.0%;">     <b>DON JUAN GASTRONOMIA E EVENTOS</b><br>     <b>Acessibilidade:</b> 53.2/100<br>     <b>Tempo médio:</b> 8.6 min<br>     <b>Ranking:</b> #35     </div>`)[0];
+                popup_0e05b2d43d1d128a6b64b0289c310d10.setContent(html_fdd268c9083a28c7bfb201ad51b467db);
+            
+        
+
+        circle_marker_ad1f347c598943da4173957ef55fa713.bindPopup(popup_0e05b2d43d1d128a6b64b0289c310d10)
+        ;
+
+        
+    
+    
+            var circle_marker_77c8e17331465359c533ccb0ee3abde3 = L.circleMarker(
+                [-21.7683638, -43.3281789],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007700ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_d30dee5ba951e751c08c712ce655760a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_902584ab537762d9b253c85a383df698 = $(`<div id="html_902584ab537762d9b253c85a383df698" style="width: 100.0%; height: 100.0%;">     <b>EMPORIO DO SABOR</b><br>     <b>Acessibilidade:</b> 66.6/100<br>     <b>Tempo médio:</b> 6.4 min<br>     <b>Ranking:</b> #22     </div>`)[0];
+                popup_d30dee5ba951e751c08c712ce655760a.setContent(html_902584ab537762d9b253c85a383df698);
+            
+        
+
+        circle_marker_77c8e17331465359c533ccb0ee3abde3.bindPopup(popup_d30dee5ba951e751c08c712ce655760a)
+        ;
+
+        
+    
+    
+            var circle_marker_06f38f316d50c1b3896f8a566245c9a9 = L.circleMarker(
+                [-21.7753465, -43.3491994],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006b00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_4d44025453c31587c28bac71fa3f4f06 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_90bb23940d134cf9b7899eccf9cbcdd9 = $(`<div id="html_90bb23940d134cf9b7899eccf9cbcdd9" style="width: 100.0%; height: 100.0%;">     <b>ESPETINHO DA VILLA</b><br>     <b>Acessibilidade:</b> 74.8/100<br>     <b>Tempo médio:</b> 5.4 min<br>     <b>Ranking:</b> #12     </div>`)[0];
+                popup_4d44025453c31587c28bac71fa3f4f06.setContent(html_90bb23940d134cf9b7899eccf9cbcdd9);
+            
+        
+
+        circle_marker_06f38f316d50c1b3896f8a566245c9a9.bindPopup(popup_4d44025453c31587c28bac71fa3f4f06)
+        ;
+
+        
+    
+    
+            var circle_marker_0d82539d457cb5583bf14f5533d2625c = L.circleMarker(
+                [-21.7854816, -43.347486],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007400ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_91edf7747195d4c8b27f06e81896cdf6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_365a3b958ded2c8955ee09316c9c288a = $(`<div id="html_365a3b958ded2c8955ee09316c9c288a" style="width: 100.0%; height: 100.0%;">     <b>IBITIBAR</b><br>     <b>Acessibilidade:</b> 68.5/100<br>     <b>Tempo médio:</b> 6.1 min<br>     <b>Ranking:</b> #20     </div>`)[0];
+                popup_91edf7747195d4c8b27f06e81896cdf6.setContent(html_365a3b958ded2c8955ee09316c9c288a);
+            
+        
+
+        circle_marker_0d82539d457cb5583bf14f5533d2625c.bindPopup(popup_91edf7747195d4c8b27f06e81896cdf6)
+        ;
+
+        
+    
+    
+            var circle_marker_6f449d4f7f2583fed18b57bc2d4e0dbb = L.circleMarker(
+                [-21.752784, -43.358278],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006a00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_182e753fc46e7445911d56e9a8e2cd92 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0fb4910eb9145178ac577b9d4237e84c = $(`<div id="html_0fb4910eb9145178ac577b9d4237e84c" style="width: 100.0%; height: 100.0%;">     <b>INFORMAL BAR & RESTAURANTE</b><br>     <b>Acessibilidade:</b> 75.7/100<br>     <b>Tempo médio:</b> 5.3 min<br>     <b>Ranking:</b> #10     </div>`)[0];
+                popup_182e753fc46e7445911d56e9a8e2cd92.setContent(html_0fb4910eb9145178ac577b9d4237e84c);
+            
+        
+
+        circle_marker_6f449d4f7f2583fed18b57bc2d4e0dbb.bindPopup(popup_182e753fc46e7445911d56e9a8e2cd92)
+        ;
+
+        
+    
+    
+            var circle_marker_b783c36040892134c59568a52be2ac2f = L.circleMarker(
+                [-21.7416711, -43.3549644],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006d00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_f4a397ff6f378a043115ea3868171748 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c27bdc2e30be1b3cf17ea4b0bd96a8c2 = $(`<div id="html_c27bdc2e30be1b3cf17ea4b0bd96a8c2" style="width: 100.0%; height: 100.0%;">     <b>LERO LERO</b><br>     <b>Acessibilidade:</b> 73.4/100<br>     <b>Tempo médio:</b> 5.4 min<br>     <b>Ranking:</b> #15     </div>`)[0];
+                popup_f4a397ff6f378a043115ea3868171748.setContent(html_c27bdc2e30be1b3cf17ea4b0bd96a8c2);
+            
+        
+
+        circle_marker_b783c36040892134c59568a52be2ac2f.bindPopup(popup_f4a397ff6f378a043115ea3868171748)
+        ;
+
+        
+    
+    
+            var circle_marker_e1bba154fd6906a706341af5193a2304 = L.circleMarker(
+                [-21.6900456, -43.4338592],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff1300ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_e6f727ee905a41f5090ed63658723db0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c020f0dce7ef820e2e35f41ce00dc638 = $(`<div id="html_c020f0dce7ef820e2e35f41ce00dc638" style="width: 100.0%; height: 100.0%;">     <b>NOSSO BAR JF</b><br>     <b>Acessibilidade:</b> 2.4/100<br>     <b>Tempo médio:</b> 15.3 min<br>     <b>Ranking:</b> #38     </div>`)[0];
+                popup_e6f727ee905a41f5090ed63658723db0.setContent(html_c020f0dce7ef820e2e35f41ce00dc638);
+            
+        
+
+        circle_marker_e1bba154fd6906a706341af5193a2304.bindPopup(popup_e6f727ee905a41f5090ed63658723db0)
+        ;
+
+        
+    
+    
+            var circle_marker_4905ac3d7a5376be835e58c39f766aaf = L.circleMarker(
+                [-21.7885709, -43.3428745],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007a00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_8b24b78566e3dd77bf852a2245ac4c9e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_146e3e5b233a0d57552a4fc705172c8d = $(`<div id="html_146e3e5b233a0d57552a4fc705172c8d" style="width: 100.0%; height: 100.0%;">     <b>PAO MOIADO BAR</b><br>     <b>Acessibilidade:</b> 64.1/100<br>     <b>Tempo médio:</b> 6.8 min<br>     <b>Ranking:</b> #26     </div>`)[0];
+                popup_8b24b78566e3dd77bf852a2245ac4c9e.setContent(html_146e3e5b233a0d57552a4fc705172c8d);
+            
+        
+
+        circle_marker_4905ac3d7a5376be835e58c39f766aaf.bindPopup(popup_8b24b78566e3dd77bf852a2245ac4c9e)
+        ;
+
+        
+    
+    
+            var circle_marker_49b409c61d8114c5d736feff22a8da15 = L.circleMarker(
+                [-21.764711, -43.3445232],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006900ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_2aeb4aed59822fc8f74e36069d52486e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_740a1bf3361c1eccc26fdcf56666dfa0 = $(`<div id="html_740a1bf3361c1eccc26fdcf56666dfa0" style="width: 100.0%; height: 100.0%;">     <b>PAPPADOG BAR</b><br>     <b>Acessibilidade:</b> 76.2/100<br>     <b>Tempo médio:</b> 5.1 min<br>     <b>Ranking:</b> #9     </div>`)[0];
+                popup_2aeb4aed59822fc8f74e36069d52486e.setContent(html_740a1bf3361c1eccc26fdcf56666dfa0);
+            
+        
+
+        circle_marker_49b409c61d8114c5d736feff22a8da15.bindPopup(popup_2aeb4aed59822fc8f74e36069d52486e)
+        ;
+
+        
+    
+    
+            var circle_marker_b15261b467b7979adbee4d13126c122d = L.circleMarker(
+                [-21.7889633, -43.3784154],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2c9600ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_bdf5d9aa44c14e9c465ded7febfba70a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_19bb9f00f8341bb8b1dde8873f602c19 = $(`<div id="html_19bb9f00f8341bb8b1dde8873f602c19" style="width: 100.0%; height: 100.0%;">     <b>PETISQUEIRA</b><br>     <b>Acessibilidade:</b> 56.6/100<br>     <b>Tempo médio:</b> 8.1 min<br>     <b>Ranking:</b> #33     </div>`)[0];
+                popup_bdf5d9aa44c14e9c465ded7febfba70a.setContent(html_19bb9f00f8341bb8b1dde8873f602c19);
+            
+        
+
+        circle_marker_b15261b467b7979adbee4d13126c122d.bindPopup(popup_bdf5d9aa44c14e9c465ded7febfba70a)
+        ;
+
+        
+    
+    
+            var circle_marker_0295b9ff0fe3e1dc7216384ea4c1dc0c = L.circleMarker(
+                [-21.7739006, -43.309326],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#91c800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_bc98e02367711445402ff95c58e4151b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_144183aad05c764b648515333c6cabc0 = $(`<div id="html_144183aad05c764b648515333c6cabc0" style="width: 100.0%; height: 100.0%;">     <b>RECANTO DOS MANACAS</b><br>     <b>Acessibilidade:</b> 48.6/100<br>     <b>Tempo médio:</b> 9.0 min<br>     <b>Ranking:</b> #36     </div>`)[0];
+                popup_bc98e02367711445402ff95c58e4151b.setContent(html_144183aad05c764b648515333c6cabc0);
+            
+        
+
+        circle_marker_0295b9ff0fe3e1dc7216384ea4c1dc0c.bindPopup(popup_bc98e02367711445402ff95c58e4151b)
+        ;
+
+        
+    
+    
+            var circle_marker_30b5a97c99e2f8ad5faf47430299c0f3 = L.circleMarker(
+                [-21.752821, -43.357038],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006700ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_0618c1a0059f8487ddccbd35cd6459d0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3f9852fdb6fad8ae0de6e9459153bdb9 = $(`<div id="html_3f9852fdb6fad8ae0de6e9459153bdb9" style="width: 100.0%; height: 100.0%;">     <b>REZA FORTE</b><br>     <b>Acessibilidade:</b> 77.4/100<br>     <b>Tempo médio:</b> 5.0 min<br>     <b>Ranking:</b> #5     </div>`)[0];
+                popup_0618c1a0059f8487ddccbd35cd6459d0.setContent(html_3f9852fdb6fad8ae0de6e9459153bdb9);
+            
+        
+
+        circle_marker_30b5a97c99e2f8ad5faf47430299c0f3.bindPopup(popup_0618c1a0059f8487ddccbd35cd6459d0)
+        ;
+
+        
+    
+    
+            var circle_marker_b1cfbc34369b2705fe853f5a95223496 = L.circleMarker(
+                [-21.757916, -43.341287],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006f00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_074f594cd2a11a0a69f9e15c08cabcd8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8d2548a3ea6835222748306693c9f6ae = $(`<div id="html_8d2548a3ea6835222748306693c9f6ae" style="width: 100.0%; height: 100.0%;">     <b>SUPER LAZIN</b><br>     <b>Acessibilidade:</b> 71.8/100<br>     <b>Tempo médio:</b> 5.8 min<br>     <b>Ranking:</b> #16     </div>`)[0];
+                popup_074f594cd2a11a0a69f9e15c08cabcd8.setContent(html_8d2548a3ea6835222748306693c9f6ae);
+            
+        
+
+        circle_marker_b1cfbc34369b2705fe853f5a95223496.bindPopup(popup_074f594cd2a11a0a69f9e15c08cabcd8)
+        ;
+
+        
+    
+    
+            var circle_marker_2ff778e4dd485c7b64677bda22842a4b = L.circleMarker(
+                [-21.7687003, -43.3436456],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006d00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_f13d00f88fd2574f82a0964b2a0733ba = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a3e995002849dbb6851d58ec0d513197 = $(`<div id="html_a3e995002849dbb6851d58ec0d513197" style="width: 100.0%; height: 100.0%;">     <b>VARANDA RESTO BEER</b><br>     <b>Acessibilidade:</b> 73.5/100<br>     <b>Tempo médio:</b> 5.6 min<br>     <b>Ranking:</b> #13     </div>`)[0];
+                popup_f13d00f88fd2574f82a0964b2a0733ba.setContent(html_a3e995002849dbb6851d58ec0d513197);
+            
+        
+
+        circle_marker_2ff778e4dd485c7b64677bda22842a4b.bindPopup(popup_f13d00f88fd2574f82a0964b2a0733ba)
+        ;
+
+        
+    
+    
+            var circle_marker_3ca2798613fcc640ebe383d9fe191747 = L.circleMarker(
+                [-21.755112, -43.37624],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#007a00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 1}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+    
+        var popup_abaf13275827f1dc8ef518d53c93a4d0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2e05b8c65990cb03352a586500a7f833 = $(`<div id="html_2e05b8c65990cb03352a586500a7f833" style="width: 100.0%; height: 100.0%;">     <b>ZAKAS GASTRO BEER</b><br>     <b>Acessibilidade:</b> 64.0/100<br>     <b>Tempo médio:</b> 7.2 min<br>     <b>Ranking:</b> #27     </div>`)[0];
+                popup_abaf13275827f1dc8ef518d53c93a4d0.setContent(html_2e05b8c65990cb03352a586500a7f833);
+            
+        
+
+        circle_marker_3ca2798613fcc640ebe383d9fe191747.bindPopup(popup_abaf13275827f1dc8ef518d53c93a4d0)
+        ;
+
+        
+    
+    
+    var color_map_67b895563ed4ab67772ac4fd9f413431 = {};
+
+    
+    color_map_67b895563ed4ab67772ac4fd9f413431.color = d3.scale.threshold()
+              .domain([0.0, 0.16032064128256512, 0.32064128256513025, 0.48096192384769537, 0.6412825651302605, 0.8016032064128257, 0.9619238476953907, 1.122244488977956, 1.282565130260521, 1.4428857715430863, 1.6032064128256514, 1.7635270541082164, 1.9238476953907815, 2.0841683366733466, 2.244488977955912, 2.404809619238477, 2.565130260521042, 2.7254509018036073, 2.8857715430861726, 3.0460921843687374, 3.2064128256513027, 3.3667334669338675, 3.527054108216433, 3.687374749498998, 3.847695390781563, 4.008016032064128, 4.168336673346693, 4.328657314629258, 4.488977955911824, 4.649298597194389, 4.809619238476954, 4.969939879759519, 5.130260521042084, 5.290581162324649, 5.4509018036072145, 5.61122244488978, 5.771543086172345, 5.9318637274549095, 6.092184368737475, 6.25250501002004, 6.412825651302605, 6.573146292585171, 6.733466933867735, 6.8937875751503, 7.054108216432866, 7.214428857715431, 7.374749498997996, 7.5350701402805615, 7.695390781563126, 7.855711422845691, 8.016032064128256, 8.176352705410821, 8.336673346693386, 8.496993987975952, 8.657314629258517, 8.817635270541082, 8.977955911823647, 9.138276553106213, 9.298597194388778, 9.458917835671343, 9.619238476953909, 9.779559118236472, 9.939879759519037, 10.100200400801603, 10.260521042084168, 10.420841683366733, 10.581162324649299, 10.741482965931864, 10.901803607214429, 11.062124248496994, 11.22244488977956, 11.382765531062125, 11.54308617234469, 11.703406813627254, 11.863727454909819, 12.024048096192384, 12.18436873747495, 12.344689378757515, 12.50501002004008, 12.665330661322646, 12.82565130260521, 12.985971943887776, 13.146292585170341, 13.306613226452907, 13.46693386773547, 13.627254509018035, 13.7875751503006, 13.947895791583166, 14.108216432865731, 14.268537074148297, 14.428857715430862, 14.589178356713427, 14.749498997995993, 14.909819639278558, 15.070140280561123, 15.230460921843687, 15.390781563126252, 15.551102204408817, 15.711422845691382, 15.871743486973948, 16.03206412825651, 16.19238476953908, 16.352705410821642, 16.51302605210421, 16.673346693386772, 16.83366733466934, 16.993987975951903, 17.15430861723447, 17.314629258517034, 17.4749498997996, 17.635270541082164, 17.795591182364728, 17.955911823647295, 18.11623246492986, 18.276553106212425, 18.43687374749499, 18.597194388777556, 18.75751503006012, 18.917835671342687, 19.07815631262525, 19.238476953907817, 19.39879759519038, 19.559118236472944, 19.71943887775551, 19.879759519038075, 20.04008016032064, 20.200400801603205, 20.360721442885772, 20.521042084168336, 20.681362725450903, 20.841683366733466, 21.002004008016034, 21.162324649298597, 21.322645290581164, 21.482965931863728, 21.64328657314629, 21.803607214428858, 21.96392785571142, 22.12424849699399, 22.284569138276552, 22.44488977955912, 22.605210420841683, 22.76553106212425, 22.925851703406813, 23.08617234468938, 23.246492985971944, 23.406813627254508, 23.567134268537075, 23.727454909819638, 23.887775551102205, 24.04809619238477, 24.208416833667336, 24.3687374749499, 24.529058116232466, 24.68937875751503, 24.849699398797597, 25.01002004008016, 25.170340681362724, 25.33066132264529, 25.490981963927855, 25.65130260521042, 25.811623246492985, 25.971943887775552, 26.132264529058116, 26.292585170340683, 26.452905811623246, 26.613226452905813, 26.773547094188377, 26.93386773547094, 27.094188376753507, 27.25450901803607, 27.414829659318638, 27.5751503006012, 27.73547094188377, 27.895791583166332, 28.0561122244489, 28.216432865731463, 28.37675350701403, 28.537074148296593, 28.697394789579157, 28.857715430861724, 29.018036072144287, 29.178356713426854, 29.338677354709418, 29.498997995991985, 29.65931863727455, 29.819639278557116, 29.97995991983968, 30.140280561122246, 30.30060120240481, 30.460921843687373, 30.62124248496994, 30.781563126252504, 30.94188376753507, 31.102204408817634, 31.2625250501002, 31.422845691382765, 31.583166332665332, 31.743486973947896, 31.903807615230463, 32.06412825651302, 32.22444889779559, 32.38476953907816, 32.545090180360724, 32.705410821643284, 32.86573146292585, 33.02605210420842, 33.186372745490985, 33.346693386773545, 33.50701402805611, 33.66733466933868, 33.82765531062124, 33.987975951903806, 34.14829659318637, 34.30861723446894, 34.4689378757515, 34.62925851703407, 34.789579158316634, 34.9498997995992, 35.11022044088176, 35.27054108216433, 35.430861723446895, 35.591182364729455, 35.75150300601202, 35.91182364729459, 36.07214428857716, 36.23246492985972, 36.392785571142284, 36.55310621242485, 36.71342685370742, 36.87374749498998, 37.034068136272545, 37.19438877755511, 37.35470941883767, 37.51503006012024, 37.675350701402806, 37.83567134268537, 37.99599198396793, 38.1563126252505, 38.31663326653307, 38.476953907815634, 38.637274549098194, 38.79759519038076, 38.95791583166333, 39.11823647294589, 39.278557114228455, 39.43887775551102, 39.59919839679359, 39.75951903807615, 39.91983967935872, 40.08016032064128, 40.24048096192385, 40.40080160320641, 40.56112224448898, 40.721442885771545, 40.88176352705411, 41.04208416833667, 41.20240480961924, 41.362725450901806, 41.523046092184366, 41.68336673346693, 41.8436873747495, 42.00400801603207, 42.16432865731463, 42.324649298597194, 42.48496993987976, 42.64529058116233, 42.80561122244489, 42.965931863727455, 43.12625250501002, 43.28657314629258, 43.44689378757515, 43.607214428857716, 43.76753507014028, 43.92785571142284, 44.08817635270541, 44.24849699398798, 44.408817635270545, 44.569138276553105, 44.72945891783567, 44.88977955911824, 45.0501002004008, 45.210420841683366, 45.37074148296593, 45.5310621242485, 45.69138276553106, 45.85170340681363, 46.012024048096194, 46.17234468937876, 46.33266533066132, 46.49298597194389, 46.653306613226455, 46.813627254509015, 46.97394789579158, 47.13426853707415, 47.294589178356716, 47.454909819639276, 47.61523046092184, 47.77555110220441, 47.93587174348698, 48.09619238476954, 48.256513026052104, 48.41683366733467, 48.57715430861723, 48.7374749498998, 48.897795591182366, 49.05811623246493, 49.21843687374749, 49.37875751503006, 49.53907815631263, 49.699398797595194, 49.859719438877754, 50.02004008016032, 50.18036072144289, 50.34068136272545, 50.501002004008015, 50.66132264529058, 50.82164328657315, 50.98196392785571, 51.142284569138276, 51.30260521042084, 51.46292585170341, 51.62324649298597, 51.78356713426854, 51.943887775551104, 52.104208416833664, 52.26452905811623, 52.4248496993988, 52.585170340681366, 52.745490981963925, 52.90581162324649, 53.06613226452906, 53.22645290581163, 53.38677354709419, 53.547094188376754, 53.70741482965932, 53.86773547094188, 54.02805611222445, 54.188376753507015, 54.34869739478958, 54.50901803607214, 54.66933867735471, 54.829659318637276, 54.98997995991984, 55.1503006012024, 55.31062124248497, 55.47094188376754, 55.6312625250501, 55.791583166332664, 55.95190380761523, 56.1122244488978, 56.27254509018036, 56.432865731462925, 56.59318637274549, 56.75350701402806, 56.91382765531062, 57.07414829659319, 57.234468937875754, 57.394789579158314, 57.55511022044088, 57.71543086172345, 57.875751503006015, 58.036072144288575, 58.19639278557114, 58.35671342685371, 58.517034068136276, 58.677354709418836, 58.8376753507014, 58.99799599198397, 59.15831663326653, 59.3186372745491, 59.478957915831664, 59.63927855711423, 59.79959919839679, 59.95991983967936, 60.120240480961925, 60.28056112224449, 60.44088176352705, 60.60120240480962, 60.76152304609219, 60.921843687374746, 61.08216432865731, 61.24248496993988, 61.40280561122245, 61.56312625250501, 61.723446893787575, 61.88376753507014, 62.04408817635271, 62.20440881763527, 62.364729458917836, 62.5250501002004, 62.68537074148296, 62.84569138276553, 63.0060120240481, 63.166332665330664, 63.326653306613224, 63.48697394789579, 63.64729458917836, 63.807615230460925, 63.967935871743485, 64.12825651302605, 64.28857715430861, 64.44889779559118, 64.60921843687375, 64.76953907815631, 64.92985971943888, 65.09018036072145, 65.25050100200401, 65.41082164328657, 65.57114228456913, 65.7314629258517, 65.89178356713427, 66.05210420841684, 66.2124248496994, 66.37274549098197, 66.53306613226452, 66.69338677354709, 66.85370741482966, 67.01402805611222, 67.17434869739479, 67.33466933867736, 67.49498997995993, 67.65531062124248, 67.81563126252505, 67.97595190380761, 68.13627254509018, 68.29659318637275, 68.45691382765531, 68.61723446893788, 68.77755511022045, 68.937875751503, 69.09819639278557, 69.25851703406813, 69.4188376753507, 69.57915831663327, 69.73947895791584, 69.8997995991984, 70.06012024048096, 70.22044088176352, 70.38076152304609, 70.54108216432866, 70.70140280561122, 70.86172344689379, 71.02204408817636, 71.18236472945891, 71.34268537074148, 71.50300601202404, 71.66332665330661, 71.82364729458918, 71.98396793587175, 72.14428857715431, 72.30460921843688, 72.46492985971943, 72.625250501002, 72.78557114228457, 72.94589178356713, 73.1062124248497, 73.26653306613227, 73.42685370741484, 73.58717434869739, 73.74749498997996, 73.90781563126252, 74.06813627254509, 74.22845691382766, 74.38877755511022, 74.54909819639279, 74.70941883767534, 74.86973947895791, 75.03006012024048, 75.19038076152304, 75.35070140280561, 75.51102204408818, 75.67134268537075, 75.83166332665331, 75.99198396793587, 76.15230460921843, 76.312625250501, 76.47294589178357, 76.63326653306613, 76.7935871743487, 76.95390781563127, 77.11422845691382, 77.27454909819639, 77.43486973947896, 77.59519038076152, 77.75551102204409, 77.91583166332666, 78.07615230460922, 78.23647294589178, 78.39679358717434, 78.55711422845691, 78.71743486973948, 78.87775551102204, 79.03807615230461, 79.19839679358718, 79.35871743486975, 79.5190380761523, 79.67935871743487, 79.83967935871743, 80.0])
+              .range(['#ff0000ff', '#ff0100ff', '#ff0200ff', '#ff0300ff', '#ff0500ff', '#ff0600ff', '#ff0700ff', '#ff0900ff', '#ff0a00ff', '#ff0b00ff', '#ff0d00ff', '#ff0e00ff', '#ff0f00ff', '#ff1100ff', '#ff1200ff', '#ff1300ff', '#ff1500ff', '#ff1600ff', '#ff1700ff', '#ff1900ff', '#ff1a00ff', '#ff1b00ff', '#ff1d00ff', '#ff1e00ff', '#ff1f00ff', '#ff2100ff', '#ff2200ff', '#ff2300ff', '#ff2500ff', '#ff2600ff', '#ff2700ff', '#ff2900ff', '#ff2a00ff', '#ff2b00ff', '#ff2d00ff', '#ff2e00ff', '#ff2f00ff', '#ff3100ff', '#ff3200ff', '#ff3300ff', '#ff3500ff', '#ff3600ff', '#ff3700ff', '#ff3900ff', '#ff3a00ff', '#ff3b00ff', '#ff3d00ff', '#ff3e00ff', '#ff3f00ff', '#ff4100ff', '#ff4200ff', '#ff4300ff', '#ff4500ff', '#ff4600ff', '#ff4700ff', '#ff4900ff', '#ff4a00ff', '#ff4b00ff', '#ff4d00ff', '#ff4e00ff', '#ff4f00ff', '#ff5000ff', '#ff5200ff', '#ff5300ff', '#ff5400ff', '#ff5600ff', '#ff5700ff', '#ff5800ff', '#ff5a00ff', '#ff5b00ff', '#ff5c00ff', '#ff5e00ff', '#ff5f00ff', '#ff6000ff', '#ff6200ff', '#ff6300ff', '#ff6400ff', '#ff6600ff', '#ff6700ff', '#ff6800ff', '#ff6a00ff', '#ff6b00ff', '#ff6c00ff', '#ff6e00ff', '#ff6f00ff', '#ff7000ff', '#ff7200ff', '#ff7300ff', '#ff7400ff', '#ff7600ff', '#ff7700ff', '#ff7800ff', '#ff7a00ff', '#ff7b00ff', '#ff7c00ff', '#ff7e00ff', '#ff7f00ff', '#ff8000ff', '#ff8200ff', '#ff8300ff', '#ff8400ff', '#ff8600ff', '#ff8700ff', '#ff8800ff', '#ff8a00ff', '#ff8b00ff', '#ff8c00ff', '#ff8e00ff', '#ff8f00ff', '#ff9000ff', '#ff9200ff', '#ff9300ff', '#ff9400ff', '#ff9600ff', '#ff9700ff', '#ff9800ff', '#ff9a00ff', '#ff9b00ff', '#ff9c00ff', '#ff9e00ff', '#ff9f00ff', '#ffa000ff', '#ffa100ff', '#ffa300ff', '#ffa400ff', '#ffa500ff', '#ffa600ff', '#ffa700ff', '#ffa800ff', '#ffa800ff', '#ffa900ff', '#ffaa00ff', '#ffaa00ff', '#ffab00ff', '#ffac00ff', '#ffad00ff', '#ffad00ff', '#ffae00ff', '#ffaf00ff', '#ffaf00ff', '#ffb000ff', '#ffb100ff', '#ffb200ff', '#ffb200ff', '#ffb300ff', '#ffb400ff', '#ffb500ff', '#ffb500ff', '#ffb600ff', '#ffb700ff', '#ffb700ff', '#ffb800ff', '#ffb900ff', '#ffba00ff', '#ffba00ff', '#ffbb00ff', '#ffbc00ff', '#ffbd00ff', '#ffbd00ff', '#ffbe00ff', '#ffbf00ff', '#ffbf00ff', '#ffc000ff', '#ffc100ff', '#ffc200ff', '#ffc200ff', '#ffc300ff', '#ffc400ff', '#ffc400ff', '#ffc500ff', '#ffc600ff', '#ffc700ff', '#ffc700ff', '#ffc800ff', '#ffc900ff', '#ffca00ff', '#ffca00ff', '#ffcb00ff', '#ffcc00ff', '#ffcc00ff', '#ffcd00ff', '#ffce00ff', '#ffcf00ff', '#ffcf00ff', '#ffd000ff', '#ffd100ff', '#ffd200ff', '#ffd200ff', '#ffd300ff', '#ffd400ff', '#ffd400ff', '#ffd500ff', '#ffd600ff', '#ffd700ff', '#ffd700ff', '#ffd800ff', '#ffd900ff', '#ffd900ff', '#ffda00ff', '#ffdb00ff', '#ffdc00ff', '#ffdc00ff', '#ffdd00ff', '#ffde00ff', '#ffdf00ff', '#ffdf00ff', '#ffe000ff', '#ffe100ff', '#ffe100ff', '#ffe200ff', '#ffe300ff', '#ffe400ff', '#ffe400ff', '#ffe500ff', '#ffe600ff', '#ffe700ff', '#ffe700ff', '#ffe800ff', '#ffe900ff', '#ffe900ff', '#ffea00ff', '#ffeb00ff', '#ffec00ff', '#ffec00ff', '#ffed00ff', '#ffee00ff', '#ffee00ff', '#ffef00ff', '#fff000ff', '#fff100ff', '#fff100ff', '#fff200ff', '#fff300ff', '#fff400ff', '#fff400ff', '#fff500ff', '#fff600ff', '#fff600ff', '#fff700ff', '#fff800ff', '#fff900ff', '#fff900ff', '#fffa00ff', '#fffb00ff', '#fffc00ff', '#fffc00ff', '#fffd00ff', '#fffe00ff', '#fffe00ff', '#ffff00ff', '#feff00ff', '#fcfe00ff', '#fafd00ff', '#f8fc00ff', '#f6fb00ff', '#f4fa00ff', '#f2f900ff', '#f0f800ff', '#eef700ff', '#ecf600ff', '#eaf500ff', '#e8f400ff', '#e6f300ff', '#e4f200ff', '#e2f100ff', '#e0f000ff', '#deef00ff', '#dcee00ff', '#daed00ff', '#d7ec00ff', '#d5eb00ff', '#d3ea00ff', '#d1e900ff', '#cfe700ff', '#cde600ff', '#cbe500ff', '#c9e400ff', '#c7e300ff', '#c5e200ff', '#c3e100ff', '#c1e000ff', '#bfdf00ff', '#bdde00ff', '#bbdd00ff', '#b9dc00ff', '#b7db00ff', '#b5da00ff', '#b3d900ff', '#b0d800ff', '#aed700ff', '#acd600ff', '#aad500ff', '#a8d400ff', '#a6d300ff', '#a4d200ff', '#a2d100ff', '#a0d000ff', '#9ecf00ff', '#9cce00ff', '#9acd00ff', '#98cc00ff', '#96cb00ff', '#94ca00ff', '#92c900ff', '#90c800ff', '#8ec700ff', '#8cc600ff', '#8ac500ff', '#87c400ff', '#85c300ff', '#83c200ff', '#81c100ff', '#7fc000ff', '#7dbf00ff', '#7bbe00ff', '#79bd00ff', '#77bc00ff', '#75bb00ff', '#73b900ff', '#71b800ff', '#6fb700ff', '#6db600ff', '#6bb500ff', '#69b400ff', '#67b300ff', '#65b200ff', '#63b100ff', '#60b000ff', '#5eaf00ff', '#5cae00ff', '#5aad00ff', '#58ac00ff', '#56ab00ff', '#54aa00ff', '#52a900ff', '#50a800ff', '#4ea700ff', '#4ca600ff', '#4aa500ff', '#48a400ff', '#46a300ff', '#44a200ff', '#42a100ff', '#40a000ff', '#3e9f00ff', '#3c9e00ff', '#399d00ff', '#379c00ff', '#359b00ff', '#339a00ff', '#319900ff', '#2f9800ff', '#2d9700ff', '#2b9600ff', '#299500ff', '#279400ff', '#259300ff', '#239200ff', '#219100ff', '#1f9000ff', '#1d8f00ff', '#1b8e00ff', '#198d00ff', '#178b00ff', '#158a00ff', '#128900ff', '#108800ff', '#0e8700ff', '#0c8600ff', '#0a8500ff', '#088400ff', '#068300ff', '#048200ff', '#028100ff', '#008000ff', '#008000ff', '#008000ff', '#007f00ff', '#007f00ff', '#007f00ff', '#007f00ff', '#007e00ff', '#007e00ff', '#007e00ff', '#007e00ff', '#007e00ff', '#007d00ff', '#007d00ff', '#007d00ff', '#007d00ff', '#007c00ff', '#007c00ff', '#007c00ff', '#007c00ff', '#007c00ff', '#007b00ff', '#007b00ff', '#007b00ff', '#007b00ff', '#007a00ff', '#007a00ff', '#007a00ff', '#007a00ff', '#007a00ff', '#007900ff', '#007900ff', '#007900ff', '#007900ff', '#007800ff', '#007800ff', '#007800ff', '#007800ff', '#007700ff', '#007700ff', '#007700ff', '#007700ff', '#007700ff', '#007600ff', '#007600ff', '#007600ff', '#007600ff', '#007500ff', '#007500ff', '#007500ff', '#007500ff', '#007500ff', '#007400ff', '#007400ff', '#007400ff', '#007400ff', '#007300ff', '#007300ff', '#007300ff', '#007300ff', '#007300ff', '#007200ff', '#007200ff', '#007200ff', '#007200ff', '#007100ff', '#007100ff', '#007100ff', '#007100ff', '#007100ff', '#007000ff', '#007000ff', '#007000ff', '#007000ff', '#006f00ff', '#006f00ff', '#006f00ff', '#006f00ff', '#006e00ff', '#006e00ff', '#006e00ff', '#006e00ff', '#006e00ff', '#006d00ff', '#006d00ff', '#006d00ff', '#006d00ff', '#006c00ff', '#006c00ff', '#006c00ff', '#006c00ff', '#006c00ff', '#006b00ff', '#006b00ff', '#006b00ff', '#006b00ff', '#006a00ff', '#006a00ff', '#006a00ff', '#006a00ff', '#006a00ff', '#006900ff', '#006900ff', '#006900ff', '#006900ff', '#006800ff', '#006800ff', '#006800ff', '#006800ff', '#006700ff', '#006700ff', '#006700ff', '#006700ff', '#006700ff', '#006600ff', '#006600ff', '#006600ff', '#006600ff', '#006500ff', '#006500ff', '#006500ff', '#006500ff', '#006500ff', '#006400ff', '#006400ff', '#006400ff']);
+    
+
+    color_map_67b895563ed4ab67772ac4fd9f413431.x = d3.scale.linear()
+              .domain([0.0, 80.0])
+              .range([0, 450 - 50]);
+
+    color_map_67b895563ed4ab67772ac4fd9f413431.legend = L.control({position: 'topright'});
+    color_map_67b895563ed4ab67772ac4fd9f413431.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_67b895563ed4ab67772ac4fd9f413431.legend.addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+
+    color_map_67b895563ed4ab67772ac4fd9f413431.xAxis = d3.svg.axis()
+        .scale(color_map_67b895563ed4ab67772ac4fd9f413431.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([0.0, 20.0, 40.0, 60.0, 80.0]);
+
+    color_map_67b895563ed4ab67772ac4fd9f413431.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_67b895563ed4ab67772ac4fd9f413431.g = color_map_67b895563ed4ab67772ac4fd9f413431.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_67b895563ed4ab67772ac4fd9f413431.g.selectAll("rect")
+        .data(color_map_67b895563ed4ab67772ac4fd9f413431.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_67b895563ed4ab67772ac4fd9f413431.x(color_map_67b895563ed4ab67772ac4fd9f413431.color.domain()[i - 1]) : color_map_67b895563ed4ab67772ac4fd9f413431.x.range()[0],
+            x1: i < color_map_67b895563ed4ab67772ac4fd9f413431.color.domain().length ? color_map_67b895563ed4ab67772ac4fd9f413431.x(color_map_67b895563ed4ab67772ac4fd9f413431.color.domain()[i]) : color_map_67b895563ed4ab67772ac4fd9f413431.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_67b895563ed4ab67772ac4fd9f413431.g.call(color_map_67b895563ed4ab67772ac4fd9f413431.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Score de acessibilidade (mais escuro = melhor)");
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_ac5d310409ff3f6679ea0df3a2d72d16);
+        
+</script>
+</html>
