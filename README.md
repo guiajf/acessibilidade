@@ -40,7 +40,7 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 
 ### 📉 Bottom 3 bares menos acessíveis
 
-| Ranking | Bar | Tempo Médio |
+| Ranking | Bar | Tempo médio |
 |---------|-----|-------------|
 | 38º | COLISEUM BAR | 15.2 min |
 | 39º | NOSSO BAR JF | 15.3 min |
