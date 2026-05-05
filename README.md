@@ -20,17 +20,17 @@ O projeto calcula e compara a acessibilidade entre **todos os 40 bares** do even
 
 | Módulo | Descrição |
 |--------|------------|
-| **Matriz de Acessibilidade** | Cálculo de caminhos mais curtos entre todos os pares de bares (~780 pares) |
-| **Estatísticas por Bar** | Tempo médio, distância média, cobertura da rede |
-| **Score Integrado** | Combinação de tempo (50%), distância (30%) e cobertura (20%) |
+| **Matriz de acessibilidade** | Cálculo de caminhos mais curtos entre todos os pares de bares (~780 pares) |
+| **Estatísticas por bar** | Tempo médio, distância média, cobertura da rede |
+| **Score integrado** | Combinação de tempo (50%), distância (30%) e cobertura (20%) |
 | **Heatmap** | Visualização matricial dos tempos de viagem entre bares |
-| **Mapa Interativo** | Mapa Folium com marcadores coloridos por nível de acessibilidade |
+| **Mapa interativo** | Mapa Folium com marcadores coloridos por nível de acessibilidade |
 
 ## 📊 Resultados Principais
 
 ### 🏆 Top 5 bares mais acessíveis
 
-| Ranking | Bar | Tempo Médio | Score Final |
+| Ranking | Bar | Tempo médio | Score final |
 |---------|-----|-------------|--------------|
 | 1º | BAR BATATA D'MOLA | 4.6 min | 80.0/100 |
 | 2º | BAR DO MARQUIM | 4.6 min | 79.6/100 |
