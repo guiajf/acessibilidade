@@ -6,4 +6,4 @@ Este diretório contém o mapa de acessibilidade dos participantes do concurso C
 - `mapa_acessibilidade_bares.html` - Mapa interativo gerado pelo Python
 
 ## Acesse o mapa
-[https://guiajf.github.io/percurso/](https://guiajf.github.io/acessibilidade/)
+[https://guiajf.github.io/acessibilidade/](https://guiajf.github.io/acessibilidade/)
